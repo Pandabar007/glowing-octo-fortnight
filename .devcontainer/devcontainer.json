@@ -1,0 +1,12 @@
+{
+  "extensions": [
+    "github.vscode-codeql",
+    "vsls-contrib.codetour"
+  ],
+   "customizations": {
+    "codespaces": {
+      "openFiles": []
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/postCreateCommand.sh"
+}

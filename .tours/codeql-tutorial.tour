@@ -1,0 +1,73 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "CodeQL tutorial",
+  "isPrimary": true,
+  "steps": [
+    {
+      "description": "First, let's make sure the CodeQL extension for VS Code is active, and has installed the latest version of the CodeQL CLI.\n\nClick `Next` to check for a CodeQL CLI update, and download it if necessary."
+    },
+    {
+      "description": "Checking for a CodeQL CLI update. Click `Next` when you see a popup notification telling you that the CLI has been updated.",
+      "commands": ["codeQL.checkForUpdatesToCLI"]
+    },
+    {
+      "directory": "codeql-tutorial-database",
+      "description": "To run a CodeQL query, we need to select a CodeQL database.\n\nWe have prepared a sample database for you to use in this tutorial.\nLook for the `codeql-tutorial-database` directory highlighted in the Explorer view in your left sidebar.\n\nTo select this as your current database, right-click on the directory, and click `CodeQL: Set Current Database`. Click `Next` when you have done that."
+    },
+    {
+      "file": "tutorial-queries/tutorial.ql",
+      "description": "This is a CodeQL query file.",
+      "line": 1
+    },
+    {
+      "file": "tutorial-queries/tutorial.ql",
+      "description": "This line imports the tutorial library, so that we can reuse the logic and data from this library in our own query.",
+      "pattern": "import tutorial.*"
+    },
+    {
+      "file": "tutorial-queries/tutorial.ql",
+      "description": "This is the query clause. It determines the output of the query.",
+      "selection": {
+        "start": {
+          "line": 7,
+          "character": 1
+        },
+        "end": {
+          "line": 8,
+          "character": 8
+        }
+      }
+    },
+    {
+      "file": "tutorial-queries/tutorial.ql",
+      "description": "It is time to run your first query!\n\nClick `Next` to run this query. The results will appear in a new `CodeQL Query Results` tab.\n\nTo run queries in future, outside this tutorial:\n\n1. Right-click within a `.ql` query file, and click `CodeQL: Run Query`\nOR\n1. Open the Command Palette with `Cmd/Ctrl+Shift+P`, start typing `CodeQL`, and click on `CodeQL: Run Query`.",
+      "selection": {
+        "start": {
+          "line": 7,
+          "character": 1
+        },
+        "end": {
+          "line": 9,
+          "character": 1
+        }
+      }
+    },
+    {
+      "file": "tutorial-queries/tutorial.ql",
+      "description": "Running your first query.",
+      "selection": {
+        "start": {
+          "line": 7,
+          "character": 1
+        },
+        "end": {
+          "line": 9,
+          "character": 1
+        }
+      },
+      "commands": [
+        "codeQL.runQuery"
+      ]
+    }
+  ]
+}
